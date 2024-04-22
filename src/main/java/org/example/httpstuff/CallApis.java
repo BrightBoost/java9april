@@ -16,7 +16,7 @@ public class CallApis {
                 .uri(URI.create("https://jsonplaceholder.typicode.com/users"))
                 .GET()
                 .build();
-
+        httpRequest = null;
         try {
             HttpResponse<String> response = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
 
